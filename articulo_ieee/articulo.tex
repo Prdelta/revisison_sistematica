@@ -1,50 +1,63 @@
-\documentclass[journal]{IEEEtran}
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+% Paquetes adicionales para el idioma, las tablas y el diagrama PRISMA
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish,es-noshorthands,es-tabla]{babel}
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{array}
-\usepackage{xcolor}
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,calc}
-\usepackage{cite}
 \usepackage{url}
-\usepackage[hidelinks]{hyperref}
-
-% Marcador visible para datos que el equipo debe completar o confirmar
-\newcommand{\pendiente}[1]{\textcolor{red}{[#1]}}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \newcommand{\lnr}{\ln(\mathrm{RMSE}_{\mathrm{esp}}/\mathrm{RMSE}_{\mathrm{AA}})}
-
 \renewcommand{\IEEEkeywordsname}{Palabras clave}
 \begin{document}
 
 \title{Metaanálisis del desempeño de la predicción espacial de variables ambientales mediante geoestadística y aprendizaje automático en regiones montañosas}
 
-\author{Kris~Ximena~Colquehuanca~Zapana,
-        Yeferson~Dariun~Laura~Livise,
-        Obed~Eliu~Leon~Mamani y
-        Kevin~Pleyer~Portillo~Machaca%
-\thanks{Los autores pertenecen a la Facultad de Ingeniería Estadística e Informática, Universidad Nacional del Altiplano, Puno, Perú. Trabajo elaborado en el curso de Estadística Espacial (docente: Fred Torres Cruz).}}
-
-\markboth{Universidad Nacional del Altiplano -- Estadística Espacial, 2026}%
-{Colquehuanca \MakeLowercase{\textit{et al.}}: Metaanálisis de la predicción espacial en regiones montañosas}
+\author{\IEEEauthorblockN{Kris Ximena Colquehuanca Zapana}
+\IEEEauthorblockA{\textit{Facultad de Ingeniería Estadística e Informática} \\
+\textit{Universidad Nacional del Altiplano}\\
+Puno, Perú}
+\and
+\IEEEauthorblockN{Yeferson Dariun Laura Livise}
+\IEEEauthorblockA{\textit{Facultad de Ingeniería Estadística e Informática} \\
+\textit{Universidad Nacional del Altiplano}\\
+Puno, Perú}
+\and
+\IEEEauthorblockN{Obed Eliu Leon Mamani}
+\IEEEauthorblockA{\textit{Facultad de Ingeniería Estadística e Informática} \\
+\textit{Universidad Nacional del Altiplano}\\
+Puno, Perú}
+\and
+\IEEEauthorblockN{Kevin Pleyer Portillo Machaca}
+\IEEEauthorblockA{\textit{Facultad de Ingeniería Estadística e Informática} \\
+\textit{Universidad Nacional del Altiplano}\\
+Puno, Perú}
+}
 
 \maketitle
 
 \begin{abstract}
-En las regiones montañosas las redes de estaciones son escasas y se concentran en cotas bajas, mientras que la precipitación y la temperatura cambian con fuerza con el relieve. Para estimarlas en sitios sin medición se usan métodos geoestadísticos, que modelan la dependencia espacial, y algoritmos de aprendizaje automático (AA), pero la evidencia comparativa es contradictoria. Esta revisión sistemática, conducida según PRISMA~2020, sintetiza los estudios publicados entre 2020 y 2026 que comparan ambos enfoques en terreno montañoso con validación fuera de muestra frente a estaciones. De 263 registros de la búsqueda principal y 127 de una búsqueda complementaria, 18 estudios cumplieron los criterios de elegibilidad y 15 aportaron 16 comparaciones al metaanálisis. El efecto se expresó como $\lnr$ y se combinó con un modelo de efectos aleatorios (REML con ajuste de Hartung--Knapp). En promedio, el AA redujo el RMSE en un 12,9\% (IC~95\%: 4,5--20,6\%; $\ln$-razón $=0{,}138$; $p=0{,}006$), con heterogeneidad moderada ($I^2=60\%$) y un intervalo de predicción que incluye la ausencia de diferencia ($-0{,}139$ a $0{,}416$). La ventaja fue menor cuando ambos métodos usaron las mismas covariables ($0{,}110$; $I^2=11\%$), solo fue significativa con estaciones de validación independientes y desapareció en los tres estudios con bajo riesgo de sesgo ($-0{,}022$). La evidencia procede sobre todo de China e Irán y solo un estudio corresponde a los Andes; ninguno al Altiplano. Los resultados sugieren una ventaja moderada pero frágil del AA, que depende de las covariables disponibles y del esquema de validación.
+En las regiones montañosas las redes de estaciones son escasas y se concentran en cotas bajas, mientras que la precipitación y la temperatura cambian con fuerza con el relieve. Para estimarlas en sitios sin medición se usan métodos geoestadísticos, que modelan la dependencia espacial, y algoritmos de aprendizaje automático (AA), pero la evidencia comparativa es contradictoria. Esta revisión sistemática, conducida según PRISMA 2020, sintetiza los estudios publicados entre 2020 y 2026 que comparan ambos enfoques en terreno montañoso con validación fuera de muestra frente a estaciones. De 263 registros de la búsqueda principal y 127 de una búsqueda complementaria, 18 estudios cumplieron los criterios de elegibilidad y 15 aportaron 16 comparaciones al metaanálisis. El efecto se expresó como el logaritmo de la razón entre el RMSE del método espacial y el del AA, y se combinó con un modelo de efectos aleatorios. En promedio, el AA redujo el RMSE en un 12,9 por ciento (intervalo de confianza del 95 por ciento: 4,5 a 20,6), con heterogeneidad moderada y un intervalo de predicción que incluye la ausencia de diferencia. La ventaja fue menor cuando ambos métodos usaron las mismas covariables, solo fue significativa con estaciones de validación independientes y desapareció en los tres estudios con bajo riesgo de sesgo. La evidencia procede sobre todo de China e Irán, solo un estudio corresponde a los Andes y ninguno al Altiplano. Los resultados sugieren una ventaja moderada pero frágil del AA, que depende de las covariables disponibles y del esquema de validación.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Aprendizaje automático, geoestadística, kriging, metaanálisis, precipitación, regiones montañosas, random forest, temperatura del aire.
+aprendizaje automático, geoestadística, kriging, metaanálisis, precipitación, regiones montañosas, random forest, temperatura del aire
 \end{IEEEkeywords}
 
 \section{Introducción}
 
-\IEEEPARstart{L}{as} montañas almacenan y regulan una fracción desproporcionada del agua dulce que consumen las poblaciones de las tierras bajas~\cite{viviroli2007}. Sin embargo, en ellas las redes de monitoreo meteorológico son escasas, están mal distribuidas y se concentran en los valles, justo donde la precipitación y la temperatura varían menos. Para producir mapas continuos que alimenten modelos hidrológicos, índices de sequía o planes de gestión del riesgo es necesario estimar estas variables en ubicaciones sin medición.
+Las montañas almacenan y regulan una fracción desproporcionada del agua dulce que consumen las poblaciones de las tierras bajas~\cite{viviroli2007}. Sin embargo, en ellas las redes de monitoreo meteorológico son escasas, están mal distribuidas y se concentran en los valles, justo donde la precipitación y la temperatura varían menos. Para producir mapas continuos que alimenten modelos hidrológicos, índices de sequía o planes de gestión del riesgo es necesario estimar estas variables en ubicaciones sin medición.
 
 Dos familias de métodos dominan esta tarea. La geoestadística (kriging ordinario, universal o con deriva externa, regresión-kriging, cokriging) y las regresiones locales como la regresión geográficamente ponderada (GWR) modelan de forma explícita la dependencia espacial y han sido la referencia durante décadas~\cite{li2011}. El aprendizaje automático (AA), en particular random forest (RF), gradient boosting y las redes neuronales, aprende relaciones no lineales con covariables como la elevación o los productos satelitales y de reanálisis~\cite{appelhans2015,hengl2018}. En los últimos años han surgido además variantes de AA que incorporan explícitamente la información espacial~\cite{hengl2018,sekulic2020}.
 
