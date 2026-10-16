@@ -24,3 +24,6 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# Archivos ajenos a esta revisión
+article_japer.pdf
