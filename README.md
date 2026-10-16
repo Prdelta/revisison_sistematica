@@ -1,4 +1,4 @@
-# Geoestadística frente a aprendizaje automático en regiones montañosas
+# Metaanálisis del desempeño de la predicción espacial de variables ambientales mediante geoestadística y aprendizaje automático en regiones montañosas
 
 Revisión sistemática y metaanálisis del desempeño predictivo de los métodos geoestadísticos frente al aprendizaje automático (AA) para estimar precipitación y temperatura del aire en sitios sin medición en regiones montañosas (2020–2026), siguiendo PRISMA 2020.
 
