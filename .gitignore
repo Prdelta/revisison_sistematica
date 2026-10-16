@@ -1,0 +1,26 @@
+# Artículos de terceros: tienen derechos de autor y no se redistribuyen
+ConjuntoDeArtículos/
+articulos_consultados/
+articulos_pdf/
+archivo/ConjuntoDeArtículos.zip
+
+# Configuración local
+.claude/
+
+# Archivos temporales de LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+build.log
+
+# Archivos temporales de Office y del sistema
+~$*
+*.tmp
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc

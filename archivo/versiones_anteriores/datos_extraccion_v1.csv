@@ -1,0 +1,18 @@
+id,estudio,anio,pais,area,variable,escala,n_estaciones,n_val,validacion,metodo_esp,rmse_esp,metodo_aa,rmse_aa,unidad,ln_ratio_directo,hibrido,cov_equiv,riesgo,nota
+sekulic2020,Sekulić et al.,2020,España,Cataluña,P,diaria,87,87,LLOCV anidada 5 pliegues,STRK,3.9,RFSI,3.8,mm,,0,1,Bajo,Tabla 4
+chen2021,Chen et al.,2021,China,Sichuan,P,mensual,156,156,k-fold aleatoria (10),KO,35.98,SRF-DC,32.20,mm,,0,0,Dudoso,Fig. 5 (valores de los paneles)
+ghorbanpour2021,Karbalaye Ghorbanpour et al.,2021,Irán,Cuenca del lago Urmia,P,anual,21,10,Estaciones independientes,GWR,210.13,SVM,150.88,mm,,0,1,Dudoso,Tabla 3 (2009-2013); solo 10 estaciones de validación
+orellanasamaniego2021,Orellana-Samaniego et al.,2021,Ecuador,Cuenca del Paute,T,mensual,28,28,LOOCV,RK (LR+OK),1.320,RF,1.150,°C,,0,1,Dudoso,Tabla 7: solo meses con autocorrelación en residuos
+zhang2022,Zhang et al.,2022,China,Norte de Guangdong,P,horaria,250,50,Estaciones independientes (20%),CoK,,GB/RF + kriging de residuos,,mm,-0.0477,1,0,Dudoso,Media de 4 eventos (Figs. 3-6): CoK 1.042/1.627/1.915/2.643; mejor AA 1.094/1.712/2.043/2.714
+lu2023,Lu et al.,2023,China,Montañas Tianshan,P,mensual,1067,96,Estaciones independientes (10%),GWR,20.94,RF,19.81,mm/mes,,0,1,Bajo,
+zhu2023,Zhu et al.,2023,China,Guangdong,P,anual,86,86,Pluviómetros independientes del ajuste,GWR,,SRF/XGBoost,,mm,0.2356,0,1,Dudoso,Media de 5 años (Tabla 3): GWR 355.34/249.63/353.08/223.15/409.47; mejor AA 298.42/224.72/268.24/153.89/318.29
+achite2024,Achite et al.,2024,Argelia,Cuenca del Wadi Cheliff,P,anual,150,50,Partición aleatoria 100/50,KED,43.48,RF,33.94,mm,,0,1,Bajo,Tabla 1 (subconjunto de prueba)
+arganaraz2025_P,Argañaraz et al.,2025,Italia,Abruzzo,P,diaria,50,17,Estaciones independientes,KU,0.45,GBF,0.48,mm/día,,0,1,Bajo,Tabla 3 (anual)
+arganaraz2025_T,Argañaraz et al.,2025,Italia,Abruzzo,T,diaria,50,17,Estaciones independientes,KU,,GBF,,°C,-0.2125,0,1,Bajo,Media TX (1.003 vs 1.522) y TN (1.23 vs 1.24)
+ghorbani2025,Ghorbani et al.,2025,Irán,Golestán,P,anual,150,150,LOOCV (espacial); M5 sin validación externa,EBK,132.0,M5,128.7,mm,,0,0,Alto,Tablas 4-5; M5 evaluado dentro de muestra
+he2025,He et al.,2025,China,Fujian,T,diaria,116,54,Estaciones independientes,KO,1.79,CatBoost,1.21,°C,,0,0,Dudoso,Tabla IV; kriging sin covariables
+husrevoglu2025,Husrevoglu y Gundogdu,2025,Turquía,Anatolia Central,P,mensual,193,32,Estaciones independientes (16%),CoK,15.6,RNA,9.6,mm,,0,0,Dudoso,Tabla 3; covariables distintas entre brazos
+liu2025,Liu et al.,2025,China,Sichuan,P,mensual,40,40,Estaciones independientes,MGWR,,RF,,mm,0.0858,0,1,Dudoso,Fig. 7: enero 9.5 vs 8.5; agosto 117.5 vs 110.6 (la figura dice 1117.5)
+jiang2026,Jiang et al.,2026,China,Meseta de Loess,P,diaria,384,87,Estaciones independientes,CoK,3.584,RF,2.974,mm/día,,0,1,Bajo,Tabla 3
+liu2026b,Liu et al.,2026,China,Longnan (Gansu),P,diaria,9,9,3 estaciones retenidas x 84 repeticiones,KO,1.4,RNA de grafos,1.2,mm/día,,0,1,Dudoso,Promedio global; solo 9 estaciones
+li2026,Li et al.,2026,China,Presa Xiluodu (cañón del Jinsha),T,diaria,47,9,Estaciones independientes,KO,1.92,XGB-C,1.17,°C,,0,0,Dudoso,Fig. 7 (RMSE anual medio); XGB-C usa la estación de referencia como covariable; RF 1.28

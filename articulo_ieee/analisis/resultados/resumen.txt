@@ -1,0 +1,40 @@
+global                     k=16, ln=0.138 [0.046; 0.231] (+14.8 %), p=0.006, tau2=0.0149, I2=59.8 %
+precipitacion              k=12, ln=0.118 [0.030; 0.207] (+12.6 %), p=0.013, tau2=0.0084, I2=50.4 %
+temperatura                k=4, ln=0.189 [-0.299; 0.676] (+20.8 %), p=0.306, tau2=0.0651, I2=74.2 %
+familia_kriging            k=12, ln=0.144 [0.016; 0.272] (+15.5 %), p=0.031, tau2=0.0240, I2=68.4 %
+familia_gwr                k=4, ln=0.119 [-0.013; 0.251] (+12.6 %), p=0.065, tau2=0.0000, I2=0.0 %
+cov_equivalentes           k=11, ln=0.110 [0.036; 0.184] (+11.6 %), p=0.008, tau2=0.0008, I2=10.6 %
+cov_no_equivalentes        k=5, ln=0.243 [-0.064; 0.549] (+27.5 %), p=0.093, tau2=0.0503, I2=84.7 %
+validacion_independiente   k=11, ln=0.193 [0.060; 0.325] (+21.2 %), p=0.009, tau2=0.0187, I2=59.1 %
+validacion_cruzada         k=5, ln=0.025 [-0.018; 0.068] (+2.5 %), p=0.187, tau2=0.0000, I2=0.0 %
+sin_riesgo_alto            k=13, ln=0.128 [0.031; 0.226] (+13.7 %), p=0.014, tau2=0.0112, I2=54.0 %
+con_hibridos               k=17, ln=0.125 [0.034; 0.216] (+13.3 %), p=0.010, tau2=0.0161, I2=60.7 %
+lu_n959                    k=16, ln=0.136 [0.045; 0.228] (+14.6 %), p=0.006, tau2=0.0147, I2=62.6 %
+solo_riesgo_bajo           k=3, ln=-0.022 [-0.279; 0.236] (-2.1 %), p=0.753, tau2=0.0003, I2=0.0 %
+un_efecto_por_estudio      k=15, ln=0.151 [0.063; 0.240] (+16.3 %), p=0.003, tau2=0.0133, I2=58.4 %
+rho_0.0                    k=16, ln=0.122 [0.039; 0.205] (+13.0 %), p=0.007, tau2=0.0044, I2=19.5 %
+rho_0.8                    k=16, ln=0.148 [0.048; 0.248] (+15.9 %), p=0.007, tau2=0.0265, I2=83.9 %
+husrevoglu_sin_EMP         k=16, ln=0.120 [0.042; 0.197] (+12.7 %), p=0.005, tau2=0.0083, I2=48.1 %
+zhu_con_SRF                k=16, ln=0.139 [0.047; 0.232] (+14.9 %), p=0.006, tau2=0.0150, I2=60.0 %
+chen_con_SRF               k=16, ln=0.148 [0.060; 0.235] (+15.9 %), p=0.003, tau2=0.0117, I2=54.4 %
+PI global -0.139 0.416 | Q 37.3 pQ 0.0011510049970029357
+Egger {'intercepto': 1.334469062562076, 'p': 0.1817744057767985}
+p subgrupos: variable 0.657 familia 0.724 cov 0.248 validacion 0.006
+LOO rango 0.114 0.153
+sekulic2020              y=+0.026 se=0.076 peso=8.4
+chen2021                 y=+0.001 se=0.057 peso=9.6
+ghorbanpour2021          y=+0.331 se=0.224 peso=2.7
+orellanasamaniego2021    y=+0.104 se=0.134 peso=5.3
+lu2023                   y=+0.055 se=0.072 peso=8.6
+zhu2023                  y=+0.180 se=0.076 peso=8.4
+achite2024               y=+0.248 se=0.100 peso=7.0
+arganaraz2025_P          y=-0.065 se=0.171 peso=3.9
+arganaraz2025_T          y=-0.212 se=0.171 peso=3.9
+ghorbani2025             y=+0.025 se=0.058 peso=9.5
+he2025                   y=+0.392 se=0.096 peso=7.2
+husrevoglu2025           y=+0.486 se=0.125 peso=5.7
+liu2025                  y=+0.086 se=0.112 peso=6.3
+jiang2026                y=+0.187 se=0.076 peso=8.4
+liu2026b                 y=+0.154 se=0.236 peso=2.5
+li2026                   y=+0.495 se=0.236 peso=2.5
+ids validacion_independiente ['ghorbanpour2021', 'lu2023', 'zhu2023', 'achite2024', 'arganaraz2025_P', 'arganaraz2025_T', 'he2025', 'husrevoglu2025', 'liu2025', 'jiang2026', 'li2026']
